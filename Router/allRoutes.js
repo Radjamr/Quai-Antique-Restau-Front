@@ -4,8 +4,10 @@ import Route from "./Route.js";
 export const allRoutes = [
     new Route("/", "Accueil", "/pages/home.html"),
     new Route("/Galerie", "La Galerie", "/pages/Galerie.html"),
-    new Route("/Signin", "Connexion", "/pages/Signin.html"),
-    new Route("/Signup", "Inscription", "/pages/Signup.html"),
+    new Route("/Signin", "Connexion", "/pages/auth/Signin.html"),
+    new Route("/Signup", "Inscription", "/pages/auth/Signup.html"),
+    new Route("/Account", "Mon Compte", "/pages/auth/Account.html"),
+    new Route("/EditPassword", "Modifier mon Mot de Passe", "/pages/auth/EditPassword.html"),
 ];
 
 //Le titre s'affiche comme ceci : Route.titre - websitename
