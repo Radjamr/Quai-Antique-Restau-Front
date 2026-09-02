@@ -6,17 +6,17 @@ const signinForm = document.getElementById("signinForm");
 btnSignin.addEventListener("click", checkCredentials);
 
 function checkCredentials(){
-    let dataForm = new FormData(signinForm);
+    const dataForm = new FormData(signinForm);
    //ici, il faudra appeler API pour vérifier les credentials en BDD
-    let myHeaders = new Headers();
+    const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    let raw = JSON.stringify({
+    const raw = JSON.stringify({
         "username": dataForm.get("email"),
         "password": dataForm.get("mdp")
     });
 
-    let requestOptions = {
+    const requestOptions = {
         method: "POST",
         headers: myHeaders,
         body: raw,

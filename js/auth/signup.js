@@ -97,21 +97,21 @@ function validateRequired(input){
 
 
 function InscrireUser() {
-    let dataForm = new FormData(formInscription);
+    const dataForm = new FormData(formInscription);
     
-    let name = dataForm.get("name");
+    const name = dataForm.get("name");
 
-    let myHeaders = new Headers();
+    const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    let raw = JSON.stringify({
+    const raw = JSON.stringify({
         "firstName": dataForm.get("nom"),
         "lastName": dataForm.get("prenom"),
         "email": dataForm.get("email"),
         "password": dataForm.get("mdp")
     });
 
-    let requestOptions = {
+    const requestOptions = {
     method: "POST",
     headers: myHeaders,
     body: raw,
